@@ -1,0 +1,2 @@
+# KP-LINQtoEntity
+kursProject
