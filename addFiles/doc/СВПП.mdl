@@ -1,0 +1,1647 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	204)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"591180D80275"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    charSet    	204
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"591180D80277"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "инженер ОАСУ"
+		quid       	"591180EB02C5"
+		stereotype 	"Actor")
+	    (object UseCase "Удалить отдел"
+		quid       	"591181D90243")
+	    (object UseCase "Создать отдел"
+		quid       	"591182B1011F")
+	    (object UseCase "Редактировать отдел"
+		quid       	"591182BB0272")
+	    (object UseCase "Создать бюро"
+		quid       	"591183C80110")
+	    (object UseCase "Редактировать бюро"
+		quid       	"591183D70317")
+	    (object UseCase "Удалить бюро"
+		quid       	"591183FF0106")
+	    (object UseCase "Добавить компьюрер"
+		quid       	"5911846B035A"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"591184AF0189"
+			supplier   	"Use Case View::Привязка работнака к компьютеру"
+			quidu      	"59118482026C")))
+	    (object UseCase "Привязка работнака к компьютеру"
+		quid       	"59118482026C")
+	    (object UseCase "Удалить компьютер"
+		quid       	"591184BC02D3"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"591186F90149"
+			supplier   	"Use Case View::Удалить привязку работника с компьютером"
+			quidu      	"591186CB0284")))
+	    (object UseCase "Редактировать компьютер"
+		quid       	"591184C7001A"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"5911854A0076"
+			supplier   	"Use Case View::Привязка работнака к компьютеру"
+			quidu      	"59118482026C")
+		    (object Dependency_Relationship
+			quid       	"591187020323"
+			supplier   	"Use Case View::Удалить привязку работника с компьютером"
+			quidu      	"591186CB0284")))
+	    (object UseCase "Создать работника"
+		quid       	"591184E7004F"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"591185250048"
+			supplier   	"Use Case View::Привязка работнака к компьютеру"
+			quidu      	"59118482026C")))
+	    (object UseCase "Редактировать работника"
+		quid       	"591184FB012A"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"591186C603DD"
+			supplier   	"Use Case View::Привязка работнака к компьютеру"
+			quidu      	"59118482026C")
+		    (object Dependency_Relationship
+			quid       	"5911870602CE"
+			supplier   	"Use Case View::Удалить привязку работника с компьютером"
+			quidu      	"591186CB0284")))
+	    (object UseCase "Удалить работника"
+		quid       	"5911850C039E"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"591186F300D6"
+			supplier   	"Use Case View::Удалить привязку работника с компьютером"
+			quidu      	"591186CB0284")))
+	    (object UseCase "Создать профессию"
+		quid       	"591185AD017E")
+	    (object UseCase "Редактировать профессию"
+		quid       	"591185B8000A")
+	    (object UseCase "Удалить профессию"
+		quid       	"591185C0038B")
+	    (object UseCase "Вывод диаграммы рабочих мест"
+		quid       	"5911862C01C3"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"591186760187"
+			supplier   	"Use Case View::Диаграмма по отделам"
+			quidu      	"5911866C0328")
+		    (object Dependency_Relationship
+			quid       	"59118678022E"
+			supplier   	"Use Case View::Диаграмма по бюро"
+			quidu      	"5911866F0082")))
+	    (object UseCase "Диаграмма по отделам"
+		quid       	"5911866C0328")
+	    (object UseCase "Диаграмма по бюро"
+		quid       	"5911866F0082")
+	    (object UseCase "Удалить привязку работника с компьютером"
+		quid       	"591186CB0284")
+	    (object Association "$UNNAMED$0"
+		quid       	"591182A602DF"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"591182A70128"
+			supplier   	"Use Case View::Удалить отдел"
+			quidu      	"591181D90243"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"591182A7012A"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$3"
+		quid       	"591182CF035C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"591182D0022A"
+			supplier   	"Use Case View::Создать отдел"
+			quidu      	"591182B1011F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"591182D0022C"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$6"
+		quid       	"591182D300DD"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"591182D30308"
+			supplier   	"Use Case View::Редактировать отдел"
+			quidu      	"591182BB0272"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"591182D3030A"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$9"
+		quid       	"591184090199"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"5911840A00E3"
+			supplier   	"Use Case View::Создать бюро"
+			quidu      	"591183C80110"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"5911840A00E5"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$12"
+		quid       	"5911840C037A"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"5911840D02CD"
+			supplier   	"Use Case View::Редактировать бюро"
+			quidu      	"591183D70317"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"5911840D02CF"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$15"
+		quid       	"591184100066"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"5911841002F0"
+			supplier   	"Use Case View::Удалить бюро"
+			quidu      	"591183FF0106"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"5911841002F2"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$18"
+		quid       	"591184B20397"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"591184B30273"
+			supplier   	"Use Case View::Добавить компьюрер"
+			quidu      	"5911846B035A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"591184B30275"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$21"
+		quid       	"5911853401D8"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"5911853500A1"
+			supplier   	"Use Case View::Создать работника"
+			quidu      	"591184E7004F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"5911853500A3"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$24"
+		quid       	"59118537027F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"591185380177"
+			supplier   	"Use Case View::Удалить компьютер"
+			quidu      	"591184BC02D3"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"591185380179"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$27"
+		quid       	"5911853B001B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"5911853B01FD"
+			supplier   	"Use Case View::Редактировать компьютер"
+			quidu      	"591184C7001A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"5911853B01FF"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$30"
+		quid       	"5911853D01FB"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"5911853E0035"
+			supplier   	"Use Case View::Редактировать работника"
+			quidu      	"591184FB012A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"5911853E0037"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$33"
+		quid       	"59118540028F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$34"
+			quid       	"591185410239"
+			supplier   	"Use Case View::Удалить работника"
+			quidu      	"5911850C039E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$35"
+			quid       	"59118541023B"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$36"
+		quid       	"591185D00023"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$37"
+			quid       	"591185D002FC"
+			supplier   	"Use Case View::Создать профессию"
+			quidu      	"591185AD017E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$38"
+			quid       	"591185D002FE"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$39"
+		quid       	"591185D3010D"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$40"
+			quid       	"591185D30367"
+			supplier   	"Use Case View::Редактировать профессию"
+			quidu      	"591185B8000A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$41"
+			quid       	"591185D30369"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$42"
+		quid       	"591185D5039D"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$43"
+			quid       	"591185D6024F"
+			supplier   	"Use Case View::Удалить профессию"
+			quidu      	"591185C0038B"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$44"
+			quid       	"591185D60251"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5")))
+	    (object Association "$UNNAMED$45"
+		quid       	"5911867302F7"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$46"
+			quid       	"591186740026"
+			supplier   	"Use Case View::Вывод диаграммы рабочих мест"
+			quidu      	"5911862C01C3"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$47"
+			quid       	"591186740028"
+			supplier   	"Use Case View::инженер ОАСУ"
+			quidu      	"591180EB02C5"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"591180D80288"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::Удалить отдел" @1
+			location   	(253, 621)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(253, 759)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Удалить отдел")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591181D90243"
+			height     	118)
+		    (object UseCaseView "Use Case View::Создать отдел" @2
+			location   	(243, 103)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(243, 241)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Создать отдел")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591182B1011F"
+			height     	118)
+		    (object UseCaseView "Use Case View::Редактировать отдел" @3
+			location   	(259, 368)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(259, 506)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Редактировать отдел")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591182BB0272"
+			height     	118)
+		    (object UseCaseView "Use Case View::Создать бюро" @4
+			location   	(259, 987)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(259, 1125)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Создать бюро")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591183C80110"
+			height     	118)
+		    (object UseCaseView "Use Case View::Редактировать бюро" @5
+			location   	(262, 1228)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(262, 1366)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Редактировать бюро")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591183D70317"
+			height     	118)
+		    (object UseCaseView "Use Case View::Удалить бюро" @6
+			location   	(253, 1487)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(253, 1625)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Удалить бюро")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591183FF0106"
+			height     	118)
+		    (object UseCaseView "Use Case View::Привязка работнака к компьютеру" @7
+			location   	(2824, 1458)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(2824, 1596)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Привязка работнака к компьютеру")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59118482026C"
+			height     	118)
+		    (object UseCaseView "Use Case View::Добавить компьюрер" @8
+			location   	(2005, 1437)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(2005, 1575)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Добавить компьюрер")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5911846B035A"
+			height     	118)
+		    (object DependencyView "" @9
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591184AF0189"
+			client     	@8
+			supplier   	@7
+			vertices   	(list Points
+			    (2113, 1438)
+			    (2712, 1452))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Создать работника" @10
+			location   	(1999, 681)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(1999, 819)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Создать работника")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591184E7004F"
+			height     	118)
+		    (object DependencyView "" @11
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591185250048"
+			client     	@10
+			supplier   	@7
+			vertices   	(list Points
+			    (2173, 844)
+			    (2761, 1399))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Удалить компьютер" @12
+			location   	(2002, 1178)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(2002, 1316)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Удалить компьютер")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591184BC02D3"
+			height     	118)
+		    (object UseCaseView "Use Case View::Редактировать компьютер" @13
+			location   	(2003, 953)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@13
+			    location   	(2003, 1091)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Редактировать компьютер")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591184C7001A"
+			height     	118)
+		    (object UseCaseView "Use Case View::Редактировать работника" @14
+			location   	(2011, 400)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(2011, 538)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Редактировать работника")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591184FB012A"
+			height     	118)
+		    (object UseCaseView "Use Case View::Удалить работника" @15
+			location   	(2010, 121)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(2010, 259)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Удалить работника")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5911850C039E"
+			height     	118)
+		    (object DependencyView "" @16
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5911854A0076"
+			client     	@13
+			supplier   	@7
+			vertices   	(list Points
+			    (2255, 1106)
+			    (2729, 1400))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Создать профессию" @17
+			location   	(716, 63)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@17
+			    location   	(716, 201)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Создать профессию")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591185AD017E"
+			height     	118)
+		    (object UseCaseView "Use Case View::Редактировать профессию" @18
+			location   	(1169, 68)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(1169, 206)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Редактировать профессию")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591185B8000A"
+			height     	118)
+		    (object UseCaseView "Use Case View::Удалить профессию" @19
+			location   	(1641, 75)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(1641, 213)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Удалить профессию")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591185C0038B"
+			height     	118)
+		    (object UseCaseView "Use Case View::Диаграмма по отделам" @20
+			location   	(824, 1461)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@20
+			    location   	(824, 1599)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Диаграмма по отделам")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5911866C0328"
+			height     	118)
+		    (object UseCaseView "Use Case View::Диаграмма по бюро" @21
+			location   	(1391, 1482)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@21
+			    location   	(1391, 1620)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Диаграмма по бюро")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5911866F0082"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::инженер ОАСУ" @22
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1142, 663)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@22
+			    location   	(1142, 823)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	325
+			    justify    	0
+			    label      	"инженер ОАСУ")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"591180EB02C5"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @23
+			location   	(722, 640)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591182A602DF"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @24
+				Parent_View 	@23
+				location   	(-1116, -554)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591182A70128"
+				client     	@23
+				supplier   	@1
+				vertices   	(list Points
+				    (722, 640)
+				    (361, 623))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @25
+				Parent_View 	@23
+				location   	(-1116, -554)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591182A7012A"
+				client     	@23
+				supplier   	@22
+				vertices   	(list Points
+				    (722, 640)
+				    (1083, 657))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @26
+			location   	(733, 406)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591182CF035C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @27
+				Parent_View 	@26
+				location   	(-1105, -788)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591182D0022A"
+				client     	@26
+				supplier   	@2
+				vertices   	(list Points
+				    (733, 406)
+				    (384, 189))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @28
+				Parent_View 	@26
+				location   	(-1105, -788)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591182D0022C"
+				client     	@26
+				supplier   	@22
+				vertices   	(list Points
+				    (733, 406)
+				    (1082, 624))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$6" @29
+			location   	(771, 536)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591182D300DD"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @30
+				Parent_View 	@29
+				location   	(-1067, -658)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591182D30308"
+				client     	@29
+				supplier   	@3
+				vertices   	(list Points
+				    (771, 536)
+				    (462, 433))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @31
+				Parent_View 	@29
+				location   	(-1067, -658)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591182D3030A"
+				client     	@29
+				supplier   	@22
+				vertices   	(list Points
+				    (771, 536)
+				    (1081, 640))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$9" @32
+			location   	(724, 813)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591184090199"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @33
+				Parent_View 	@32
+				location   	(-1114, -381)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911840A00E3"
+				client     	@32
+				supplier   	@4
+				vertices   	(list Points
+				    (724, 813)
+				    (367, 945))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @34
+				Parent_View 	@32
+				location   	(-1114, -381)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911840A00E5"
+				client     	@32
+				supplier   	@22
+				vertices   	(list Points
+				    (724, 813)
+				    (1081, 682))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$12" @35
+			location   	(671, 962)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5911840C037A"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @36
+				Parent_View 	@35
+				location   	(-1167, -232)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911840D02CD"
+				client     	@35
+				supplier   	@5
+				vertices   	(list Points
+				    (671, 962)
+				    (349, 1168))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @37
+				Parent_View 	@35
+				location   	(-1167, -232)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911840D02CF"
+				client     	@35
+				supplier   	@22
+				vertices   	(list Points
+				    (671, 962)
+				    (994, 757))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$15" @38
+			location   	(652, 1114)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591184100066"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$16" @39
+				Parent_View 	@38
+				location   	(-1186, -80)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911841002F0"
+				client     	@38
+				supplier   	@6
+				vertices   	(list Points
+				    (652, 1114)
+				    (311, 1428))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$17" @40
+				Parent_View 	@38
+				location   	(-1186, -80)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911841002F2"
+				client     	@38
+				supplier   	@22
+				vertices   	(list Points
+				    (652, 1114)
+				    (994, 800))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$18" @41
+			location   	(1614, 1086)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591184B20397"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$19" @42
+				Parent_View 	@41
+				location   	(-224, -108)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591184B30273"
+				client     	@41
+				supplier   	@8
+				vertices   	(list Points
+				    (1614, 1086)
+				    (1939, 1379))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$20" @43
+				Parent_View 	@41
+				location   	(-224, -108)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591184B30275"
+				client     	@41
+				supplier   	@22
+				vertices   	(list Points
+				    (1614, 1086)
+				    (1289, 794))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$21" @44
+			location   	(1543, 670)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5911853401D8"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @45
+				Parent_View 	@44
+				location   	(-295, -524)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911853500A1"
+				client     	@44
+				supplier   	@10
+				vertices   	(list Points
+				    (1543, 670)
+				    (1888, 677))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @46
+				Parent_View 	@44
+				location   	(-295, -524)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911853500A3"
+				client     	@44
+				supplier   	@22
+				vertices   	(list Points
+				    (1543, 670)
+				    (1199, 663))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$24" @47
+			location   	(1553, 908)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59118537027F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$25" @48
+				Parent_View 	@47
+				location   	(-285, -286)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591185380177"
+				client     	@47
+				supplier   	@12
+				vertices   	(list Points
+				    (1553, 908)
+				    (1908, 1120))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$26" @49
+				Parent_View 	@47
+				location   	(-285, -286)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591185380179"
+				client     	@47
+				supplier   	@22
+				vertices   	(list Points
+				    (1553, 908)
+				    (1199, 696))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$27" @50
+			location   	(1545, 796)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5911853B001B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$28" @51
+				Parent_View 	@50
+				location   	(-293, -398)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911853B01FD"
+				client     	@50
+				supplier   	@13
+				vertices   	(list Points
+				    (1545, 796)
+				    (1891, 913))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$29" @52
+				Parent_View 	@50
+				location   	(-293, -398)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911853B01FF"
+				client     	@50
+				supplier   	@22
+				vertices   	(list Points
+				    (1545, 796)
+				    (1199, 680))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$30" @53
+			location   	(1482, 557)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5911853D01FB"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$31" @54
+				Parent_View 	@53
+				location   	(-356, -637)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911853E0035"
+				client     	@53
+				supplier   	@14
+				vertices   	(list Points
+				    (1482, 557)
+				    (1766, 471))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$32" @55
+				Parent_View 	@53
+				location   	(-356, -637)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5911853E0037"
+				client     	@53
+				supplier   	@22
+				vertices   	(list Points
+				    (1482, 557)
+				    (1199, 643))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$33" @56
+			location   	(1513, 428)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59118540028F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$34" @57
+				Parent_View 	@56
+				location   	(-325, -766)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591185410239"
+				client     	@56
+				supplier   	@15
+				vertices   	(list Points
+				    (1513, 428)
+				    (1828, 232))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$35" @58
+				Parent_View 	@56
+				location   	(-325, -766)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"59118541023B"
+				client     	@56
+				supplier   	@22
+				vertices   	(list Points
+				    (1513, 428)
+				    (1199, 624))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$36" @59
+			location   	(958, 404)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591185D00023"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$37" @60
+				Parent_View 	@59
+				location   	(-513, -502)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591185D002FC"
+				client     	@59
+				supplier   	@17
+				vertices   	(list Points
+				    (958, 404)
+				    (831, 226))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$38" @61
+				Parent_View 	@59
+				location   	(-513, -502)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591185D002FE"
+				client     	@59
+				supplier   	@22
+				vertices   	(list Points
+				    (958, 404)
+				    (1085, 583))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$39" @62
+			location   	(1151, 406)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591185D3010D"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$40" @63
+				Parent_View 	@62
+				location   	(-320, -500)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591185D30367"
+				client     	@62
+				supplier   	@18
+				vertices   	(list Points
+				    (1151, 406)
+				    (1159, 231))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$41" @64
+				Parent_View 	@62
+				location   	(-320, -500)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591185D30369"
+				client     	@62
+				supplier   	@22
+				vertices   	(list Points
+				    (1151, 406)
+				    (1144, 581))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$42" @65
+			location   	(1351, 414)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591185D5039D"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$43" @66
+				Parent_View 	@65
+				location   	(-120, -492)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591185D6024F"
+				client     	@65
+				supplier   	@19
+				vertices   	(list Points
+				    (1351, 414)
+				    (1503, 238))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$44" @67
+				Parent_View 	@65
+				location   	(-120, -492)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591185D60251"
+				client     	@65
+				supplier   	@22
+				vertices   	(list Points
+				    (1351, 414)
+				    (1199, 591))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Вывод диаграммы рабочих мест" @68
+			location   	(1130, 1033)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@68
+			    location   	(1130, 1171)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Вывод диаграммы рабочих мест")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5911862C01C3"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$45" @69
+			location   	(1132, 911)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5911867302F7"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$46" @70
+				Parent_View 	@69
+				location   	(92, -67)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591186740026"
+				client     	@69
+				supplier   	@68
+				vertices   	(list Points
+				    (1132, 911)
+				    (1130, 974))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$47" @71
+				Parent_View 	@69
+				location   	(92, -67)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"591186740028"
+				client     	@69
+				supplier   	@22
+				vertices   	(list Points
+				    (1132, 911)
+				    (1134, 848))
+				line_style 	0)))
+		    (object DependencyView "" @72
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591186760187"
+			client     	@68
+			supplier   	@20
+			vertices   	(list Points
+			    (1014, 1196)
+			    (863, 1401))
+			line_style 	0)
+		    (object DependencyView "" @73
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59118678022E"
+			client     	@68
+			supplier   	@21
+			vertices   	(list Points
+			    (1224, 1196)
+			    (1355, 1422))
+			line_style 	0)
+		    (object DependencyView "" @74
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591186C603DD"
+			client     	@14
+			supplier   	@7
+			vertices   	(list Points
+			    (2135, 563)
+			    (2777, 1399))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Удалить привязку работника с компьютером" @75
+			location   	(2766, 106)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@75
+			    location   	(2766, 244)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Удалить привязку работника с компьютером")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"591186CB0284"
+			height     	118)
+		    (object DependencyView "" @76
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591186F300D6"
+			client     	@15
+			supplier   	@75
+			vertices   	(list Points
+			    (2118, 116)
+			    (2655, 105))
+			line_style 	0)
+		    (object DependencyView "" @77
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591186F90149"
+			client     	@12
+			supplier   	@75
+			vertices   	(list Points
+			    (2040, 1118)
+			    (2632, 295))
+			line_style 	0)
+		    (object DependencyView "" @78
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"591187020323"
+			client     	@13
+			supplier   	@75
+			vertices   	(list Points
+			    (2049, 895)
+			    (2596, 295))
+			line_style 	0)
+		    (object DependencyView "" @79
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5911870602CE"
+			client     	@14
+			supplier   	@75
+			vertices   	(list Points
+			    (2119, 355)
+			    (2468, 219))
+			line_style 	0)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"591180D80276"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"591180D80278"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"591180D8027C"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"591180D80278"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"591180D80287"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"591180D80276")
+    process_structure 	(object Processes
+	quid       	"591180D80279"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"591180D8027B"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"591180D8027A"))
