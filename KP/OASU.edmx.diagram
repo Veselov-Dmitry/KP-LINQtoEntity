@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b36cf46b92e343d8a469b9564f99c5ad" Name="Diagram1" DisplayType="true">
+        <EntityTypeShape EntityType="OASUModel.Computer" Width="1.5" PointX="12.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OASUModel.Department" Width="1.5" PointX="9.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OASUModel.Developer" Width="1.5" PointX="2.25" PointY="5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OASUModel.Document_types" Width="1.5" PointX="2.25" PointY="3.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OASUModel.Document" Width="1.5" PointX="0.5" PointY="3.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OASUModel.Employee" Width="1.5" PointX="7.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OASUModel.Office" Width="1.5" PointX="9.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OASUModel.Prg_Systems" Width="1.5" PointX="2.25" PointY="3.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OASUModel.PrgLang" Width="1.5" PointX="0.5" PointY="3.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OASUModel.Profession" Width="1.5" PointX="7.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OASUModel.Records_history" Width="1.5" PointX="0.5" PointY="5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OASUModel.Sub_Systems" Width="1.5" PointX="0.5" PointY="4.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OASUModel.sysdiagram" Width="1.5" PointX="2.25" PointY="2.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OASUModel.User" Width="1.5" PointX="2.25" PointY="4.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OASUModel.Workplace" Width="1.5" PointX="12.75" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="OASUModel.R_3" ManuallyRouted="false" />
+        <AssociationConnector Association="OASUModel.R_19" ManuallyRouted="false" />
+        <AssociationConnector Association="OASUModel.R_20" ManuallyRouted="false" />
+        <AssociationConnector Association="OASUModel.R_1" ManuallyRouted="false" />
+        <AssociationConnector Association="OASUModel.R_2" ManuallyRouted="false" />
+        <AssociationConnector Association="OASUModel.R_14" ManuallyRouted="false" />
+        <AssociationConnector Association="OASUModel.R_4" ManuallyRouted="true" >
+          <ConnectorPoint PointX="9.75" PointY="6.2970441669437056" />
+          <ConnectorPoint PointX="9.4583333333333339" PointY="6.2970441669437047" />
+          <ConnectorPoint PointX="9.2916666666666661" PointY="6.2970441669437056" />
+          <ConnectorPoint PointX="9.25" PointY="6.2970441669437056" />
+          <ConnectorPoint PointX="9.25" PointY="8.3840950520833335" />
+          <ConnectorPoint PointX="6.75" PointY="8.3840950520833335" />
+          <ConnectorPoint PointX="6.75" PointY="6.81943466306526" />
+          <ConnectorPoint PointX="7.25" PointY="6.81943466306526" />
+        </AssociationConnector>
+        <AssociationConnector Association="OASUModel.R_5" ManuallyRouted="true" >
+          <ConnectorPoint PointX="7.3123066923076925" PointY="4.22068359375" />
+          <ConnectorPoint PointX="6.9375" PointY="4.5954902860576929" />
+          <ConnectorPoint PointX="6.9375" PointY="6.6945325208224595" />
+          <ConnectorPoint PointX="7.25" PointY="6.6945325208224595" />
+        </AssociationConnector>
+        <AssociationConnector Association="OASUModel.R_8" ManuallyRouted="true" >
+          <ConnectorPoint PointX="7.25" PointY="6.0641537566918213" />
+          <ConnectorPoint PointX="6.875" PointY="6.0641537566918213" />
+          <ConnectorPoint PointX="6.875" PointY="4.5" />
+          <ConnectorPoint PointX="6.9496569527243608" PointY="4.4999999999999991" />
+          <ConnectorPoint PointX="7.1163236193910269" PointY="4.5" />
+          <ConnectorPoint PointX="10.416666666666666" PointY="4.4999999999999991" />
+          <ConnectorPoint PointX="10.583333333333334" PointY="4.5" />
+          <ConnectorPoint PointX="12.375" PointY="4.5" />
+          <ConnectorPoint PointX="12.375" PointY="4.75" />
+          <ConnectorPoint PointX="13.093748" PointY="4.75" />
+          <ConnectorPoint PointX="13.093748" PointY="5.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="OASUModel.R_7" ManuallyRouted="true" >
+          <ConnectorPoint PointX="9.75" PointY="6.0839450300232434" />
+          <ConnectorPoint PointX="9.375" PointY="6.0839450300232434" />
+          <ConnectorPoint PointX="9.375" PointY="8.6340950520833335" />
+          <ConnectorPoint PointX="13.104256131081943" PointY="8.6340950520833335" />
+          <ConnectorPoint PointX="13.104256131081943" PointY="8.2590950520833335" />
+        </AssociationConnector>
+        <AssociationConnector Association="OASUModel.R_11" ManuallyRouted="false" />
+        <AssociationConnector Association="OASUModel.R_13" ManuallyRouted="false" />
+        <AssociationConnector Association="OASUModel.R_15" ManuallyRouted="false" />
+        <AssociationConnector Association="OASUModel.R_16" ManuallyRouted="false" />
+        <AssociationConnector Association="OASUModel.Workplace_to_Computer" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
