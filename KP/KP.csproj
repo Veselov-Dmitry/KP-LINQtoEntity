@@ -80,6 +80,9 @@
     <Compile Include="Computer.cs">
       <DependentUpon>OASU.tt</DependentUpon>
     </Compile>
+    <Compile Include="ContexView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Department.cs">
       <DependentUpon>OASU.tt</DependentUpon>
     </Compile>
