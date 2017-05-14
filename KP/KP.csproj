@@ -80,9 +80,7 @@
     <Compile Include="Computer.cs">
       <DependentUpon>OASU.tt</DependentUpon>
     </Compile>
-    <Compile Include="ContexView.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ContextView.cs" />
     <Compile Include="Department.cs">
       <DependentUpon>OASU.tt</DependentUpon>
     </Compile>
@@ -104,6 +102,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RowEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RowEdit.Designer.cs">
+      <DependentUpon>RowEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Presentation.cs" />
     <Compile Include="OASU.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +141,12 @@
     <Compile Include="Records_history.cs">
       <DependentUpon>OASU.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Row.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Row.Designer.cs">
+      <DependentUpon>Row.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sub_Systems.cs">
       <DependentUpon>OASU.tt</DependentUpon>
     </Compile>
@@ -154,6 +165,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RowEdit.resx">
+      <DependentUpon>RowEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -163,6 +177,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Row.resx">
+      <DependentUpon>Row.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="OASU.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>OASU.Designer.cs</LastGenOutput>

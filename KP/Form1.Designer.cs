@@ -142,18 +142,21 @@
             this.отделыToolStripMenuItem.Name = "отделыToolStripMenuItem";
             this.отделыToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.отделыToolStripMenuItem.Text = "Отделы";
+            this.отделыToolStripMenuItem.Click += new System.EventHandler(this.DepartmentView);
             // 
             // бюроToolStripMenuItem
             // 
             this.бюроToolStripMenuItem.Name = "бюроToolStripMenuItem";
             this.бюроToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.бюроToolStripMenuItem.Text = "Бюро";
+            this.бюроToolStripMenuItem.Click += new System.EventHandler(this.OfficeView);
             // 
             // профессииToolStripMenuItem
             // 
             this.профессииToolStripMenuItem.Name = "профессииToolStripMenuItem";
             this.профессииToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.профессииToolStripMenuItem.Text = "Профессии";
+            this.профессииToolStripMenuItem.Click += new System.EventHandler(this.ProfessionView);
             // 
             // справкаToolStripMenuItem
             // 
@@ -217,19 +220,20 @@
             this.mainDataGridView.Location = new System.Drawing.Point(6, 19);
             this.mainDataGridView.MultiSelect = false;
             this.mainDataGridView.Name = "mainDataGridView";
+            this.mainDataGridView.ReadOnly = true;
             this.mainDataGridView.RowHeadersWidth = 20;
             this.mainDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mainDataGridView.Size = new System.Drawing.Size(776, 414);
             this.mainDataGridView.TabIndex = 0;
-            this.mainDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainDataGridView_CellClick);
-            this.mainDataGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.mainDataGridView_RowPostPaint);
+            this.mainDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MainDataGridView_RowPostPaint);
+            this.mainDataGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.MainDataGridView_RowPostPaint);
             // 
             // unitGroupBox
             // 
             this.unitGroupBox.Controls.Add(this.unitDataGreedView);
             this.unitGroupBox.Location = new System.Drawing.Point(806, 52);
             this.unitGroupBox.Name = "unitGroupBox";
-            this.unitGroupBox.Size = new System.Drawing.Size(227, 156);
+            this.unitGroupBox.Size = new System.Drawing.Size(227, 433);
             this.unitGroupBox.TabIndex = 4;
             this.unitGroupBox.TabStop = false;
             this.unitGroupBox.Text = "Элемент";
@@ -244,8 +248,9 @@
             this.unitDataGreedView.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.unitDataGreedView.Location = new System.Drawing.Point(6, 19);
             this.unitDataGreedView.Name = "unitDataGreedView";
+            this.unitDataGreedView.ReadOnly = true;
             this.unitDataGreedView.RowHeadersVisible = false;
-            this.unitDataGreedView.Size = new System.Drawing.Size(215, 131);
+            this.unitDataGreedView.Size = new System.Drawing.Size(215, 366);
             this.unitDataGreedView.TabIndex = 4;
             // 
             // toolStrip1
@@ -293,10 +298,12 @@
             this.Controls.Add(this.unitGroupBox);
             this.Controls.Add(this.mainGroupBox);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Shown += new System.EventHandler(this.WorkplacesView);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Exit);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.mainGroupBox.ResumeLayout(false);
